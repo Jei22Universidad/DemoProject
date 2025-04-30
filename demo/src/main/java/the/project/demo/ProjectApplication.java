@@ -12,7 +12,7 @@ public class ProjectApplication {
     public static void main(String[] args) {
       SpringApplication.run(ProjectApplication.class, args);
     }
-    @GetMapping("/")
+    @GetMapping("/github-webhook/")
     public String hello(@RequestParam(value = "name", defaultValue = "vamosBien") String name) {
       return String.format("Hello %s!", name);
     }
