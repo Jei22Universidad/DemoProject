@@ -12,8 +12,8 @@ public class ProjectApplication {
     public static void main(String[] args) {
       SpringApplication.run(ProjectApplication.class, args);
     }
-    @GetMapping("/github-webhook")
-    public String hello(@RequestParam(value = "nos reunimos", defaultValue = "el sabado a que hora") String name) {
+    @GetMapping("/github-webhook/")
+    public String hello(@RequestParam(value = "nos reunimos", defaultValue = "el sabado a que horas") String name) {
       return String.format("Hello %s!", name);
     }
 }
